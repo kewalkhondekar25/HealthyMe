@@ -1,0 +1,262 @@
+/*------------------------------------------------------------------------HEALTHYME*/
+
+/*BODY*/
+body{
+  text-transform: capitalize;
+  /*background-image: url(./assets/home2.jpg);*/
+  /*z-index: 5;*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*height: 100vh;*/
+  
+  
+}
+/*--------------------------------------------------------------------------------*/
+
+/*NAVBAR*/
+/*
+.outer-nav{
+  padding: 0px 55px;
+}
+*/
+nav{
+  background-color: #FAF3E6;
+  /*border-end-end-radius: 15px;
+  border-end-start-radius: 15px;
+  */
+  height: 65px;
+  
+}
+.nav2{
+  display: flex;
+  margin-left: -185px;
+  margin-bottom: 15px;
+}
+.nav2 img{
+  height: 50px;
+  width: 50px;
+}
+.nav2 h3{
+  color: #154726;
+  font-size: 35px;
+  font-family: 'Amatic SC', cursive;
+}
+/*li*/
+.navbar ul{
+  display: flex;
+  list-style: none;
+  padding: 0px 30px;
+}
+.navbar li{
+  padding: 0px 25px;
+  font-family: 'Caveat', cursive;
+  color: #154726;
+  font-size: 22px;
+  position: relative;
+  
+}
+/*btn-cross*/
+.btn-cross{
+  display: none;
+}
+/*btn-bar*/
+.btn-bar{
+  display: none;
+}
+/*li-underline-effect*/
+li:hover{
+  cursor: pointer;
+}
+.nav1 li::before{
+  content: "";
+  position: absolute;
+  left: 10;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background-color: #154726;
+  transition: width 0.25s ease-out;
+}
+.nav3 .meals::before{
+  content: "";
+  position: absolute;
+  left: 10;
+  bottom: 5px;
+  width: 0;  /*hide width 65%*/
+  height: 2px;
+  background-color: #154726;
+  transition: width 0.25s ease-out; 
+}
+.nav1 li:hover:before{
+  width: 65%;
+}
+.nav3 .meals:hover:before{
+  width: 65%;
+}
+/*li-underline-effect*/
+
+/*HOME*/
+.title{
+  font-family: 'Amatic SC', cursive;
+  font-family: 'Caveat', cursive;
+  font-size: 50px;
+  color: #FAF3E6;
+  z-index: 1;
+  
+}
+.title{
+ position: absolute;
+ right: 50px;
+ top: 100px;
+}
+/*Title-Effect*/
+section  .t1::before{
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  height: 50px;
+  width: 250px;
+  z-index: -1;
+  background-color: #154726;
+  transform: skewX(-15deg);
+}
+
+section  .t2::before{
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 265px;
+  height: 50px;
+  width: 370px;
+  background-color: #154726;
+  z-index: -1;
+  transform: skewX(-15deg);
+}
+section .t3::before{
+  content: "";
+  position: absolute;
+  top: 85px;
+  height: 50px;
+  width: 315px;
+  background-color: #154726;
+  z-index: -1;
+  transform: skewX(-15deg);
+}
+
+
+/*------------------------------------------------------------------RESPONSIVE*/
+@media screen and (max-width:425px) {
+  body{
+    /*
+    background-image: url('./assets/vegan2.jpg');
+    background-position: -50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    */
+    
+    
+  }
+
+  .outer-nav{
+    padding: 20px 20px;
+  }
+  nav{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-end-end-radius: 10px;
+    border-end-start-radius: 10px;
+    height: 0px;
+    transition: height 0.2s ease-out;
+
+    opacity: 0.85;
+  }
+  /*to hide nav
+  .hide-nav{
+    display: none;
+  }
+  */
+  
+
+  /*toggle-ON*/
+  .navbar{
+    position: relative;
+  }
+  .navbar .nav2{
+    position:absolute;
+    left: 185px;
+    top: 12px;
+  }
+
+  .nav1 ul{
+    display: block;
+    position: absolute;
+    top: 85px;
+    left: -35px;
+  }
+  .nav3 .meals{
+    position: absolute;
+    top: 150px;
+    left: -10px;
+  }
+  /*btn-cart*/
+  .btn-cart{
+    position: absolute;
+    right: -65px;
+    top: 5px;
+  }
+  /*btn-cross*/
+  .btn-cross{
+    position: absolute;
+    display: block;
+    top: 6px;
+    right: -40px;
+  }
+  /*dynamic nav*/
+  .toggle-on{
+    position: relative;
+  }
+  .toggle-on nav{
+    height: 200px;
+  }
+  .toggle-on .meals{
+    display: block;
+  }
+  
+  /*toggle-ON*/
+  
+
+  /*toggle-OFF*/
+  .toggle-off{
+    position: relative;
+  }
+  .toggle-off nav{
+    height: 70px;
+  }
+  .toggle-off .btn-cross{
+    display: none;
+  }
+  .toggle-off .btn-cart{
+    display: block;
+    position: absolute;
+    top: 13px;
+    right: 37px;
+  }
+  .btn-bar-size{
+    height: 25px;
+    width: 25px;
+  }
+  .toggle-off .btn-bar {
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 13px;
+  }
+  .toggle-off .nav1,.meals{
+    display: none;
+  }
+}
+/*-----------------------------------------------------------------HOME*/
+
+
+
