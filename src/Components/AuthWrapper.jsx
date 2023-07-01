@@ -1,9 +1,6 @@
 import React from 'react'
-import { useAuth0 } from '@auth0/auth0-react'
-import loadingLogo from '../assets/mylogo2.png'
 
-const AuthWrapper = ({children}) => {
-    const {isLoading, error} = useAuth0()
+const AuthWrapper = ({children}) => {  
 
     /*
     if(isLoading){
