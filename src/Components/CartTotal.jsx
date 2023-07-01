@@ -21,7 +21,7 @@ const CartTotal = () => {
           </Link>
           <PersonRemoveIcon className='btn-logout-icon' onClick={() => logout({ returnTo: window.location.origin })} />
         </div> :
-        <button className='btn-checkout' onClick={loginWithRedirect}> < PersonAddIcon />Login to Checkout</button>
+        <button className='btn-checkout btn-login' onClick={loginWithRedirect}> < PersonAddIcon />Login to Checkout</button>
 
       }
 

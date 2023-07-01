@@ -51,12 +51,12 @@ const Checkoutpage = () => {
     <section className='checkout-pg'>
       <button onClick={() => checkOutHandler(total_amount, user)}>Pay Now</button>
       <table className='table table-hover caption-top'>
-        <caption>Test Card & UPI Details for Successfull Payment</caption>
+        <caption>Test Cards & UPI Details for Test Payment</caption>
         <thead>
           <tr>
             <th>Payment Network</th>
             <th>Card Number	</th>
-            <th>CVV</th>
+            <th>CVV/UPI</th>
             <th>Expiry Date</th>
           </tr>
         </thead>
@@ -73,18 +73,21 @@ const Checkoutpage = () => {
             <td>Random CVV	</td>
             <td>Any future date</td>
           </tr>
+        {/*
           <tr>
             <td><FaCcMastercard /> Mastercard International</td>
             <td>5555 5555 5555 4444</td>
             <td>Random CVV	</td>
             <td>Any future date</td>
           </tr>
+
           <tr>
             <td> <RiVisaFill /> Visa International</td>
             <td>4012 8888 8888 1881</td>
             <td>Random CVV	</td>
             <td>Any future date</td>
           </tr>
+        */}  
           <tr>
             <td> UPI</td>
             <td> <SiPhonepe/> <SiGooglepay/> <FaApplePay/> <SiPaytm/> </td>

@@ -1240,7 +1240,7 @@ nav {
             button {
                 position: absolute;
                 top: 120px;
-                left: 270px;
+                left: 265px;
             }
 
             .footer-logo {
@@ -1267,7 +1267,7 @@ nav {
             ul {
                 position: absolute;
                 left: -225px;
-                top: 350px;
+                top: 305px;
                 li{
                     font-size: 20px;
                 }
@@ -1463,14 +1463,15 @@ nav {
     .all-cart-items{
         position: relative;
         width: 100vw;
+        
 
         .css-c67lzo{
             width: 100vw;
            
         }  
         .css-2ulfj5-MuiTypography-root{
-            font-size: 12px;
-            font-weight: bold;
+            font-size: 15px;
+            //font-weight: bold;
         } 
         .css-46bh2p-MuiCardContent-root{
             padding: 0px;
@@ -1497,30 +1498,41 @@ nav {
             }
             .cart-bill{
                 position: relative;
+                p{
+                    position: absolute;
+                    top: -185px;
+                }
                 h4{
-                    font-size: 25px;
+                    position: absolute;
+                    top: -135px;
+                    font-size: 24px;
                 }
                 h3{
-                    font-size: 25px;
+                    position: absolute;
+                    top: -110px;
+                    font-size: 22px;
+                    
                 }
                 .btn-checkout{
                     position: absolute;
-                    top: 210px;
-                    left: -90px;
+                    top: 130px;
+                    left: -140px;
                 }
                 .btn-pymnt{
+                    
                     position: absolute;
-                    top: 25px;
-                    left: -10px;
+                    top: -50px;
+                    left: -50px;
                     width: 200px;
                 }
                 .btn-logout-icon{
                     position: absolute;
-                    top: 35px;
-                    left: 200px;
+                    top: -40px;
+                    left: 165px;
                     border-radius: 25px;
                     background-color: #FFD550;
                 }
+                
             }
         }
         a{
@@ -1570,7 +1582,7 @@ nav {
         button{
             position: absolute;
             left: 140px;
-            top: 650px;
+            top: 500px;
             height: 45px;
             width: 120px;
             font-size: 25px;
