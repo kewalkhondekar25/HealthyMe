@@ -38,8 +38,8 @@ const AppProvider = ({ children }) => {
     /*AUTH0*/
     const {isAuthenticated, loginWithRedirect, logout, user} = useAuth0();
     if(isAuthenticated){
-        console.log(user.name)
-        console.log(user.email)
+        //console.log(user.name)
+        //console.log(user.email)
     }
 
     const [myUser, setMyUser] = useState(null);
@@ -127,11 +127,11 @@ const AppProvider = ({ children }) => {
     }
     /*TOGGLE_AMOUNT*/
     const increaseAmount = (_id)=>{
-        console.log(_id)
+        //console.log(_id)
         dispatch({type:'INCREASE_AMOUNT', payload: _id})
     }
     const decreaseAmount = (_id)=>{
-        console.log(_id)
+        //console.log(_id)
         dispatch({type:'DECREASE_AMOUNT', payload: _id})
 
     }

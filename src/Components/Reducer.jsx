@@ -65,7 +65,7 @@ const Reducer = (state, action) => {
             tempMeals = tempMeals.filter((item => {
                 return item.category.toLowerCase().startsWith(select)
             }))
-            console.log(tempMeals)
+            //console.log(tempMeals)
         }
         return { ...state, meals: tempMeals }
     }

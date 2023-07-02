@@ -5,9 +5,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Box, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 
 const CartItems = ({ _id, title, price, image, amount }) => {
+  
   const { removeMeal, increaseAmount, decreaseAmount } = useContext(AppContext);
-
-
 
   return (
     <section className='all-cart-items'>

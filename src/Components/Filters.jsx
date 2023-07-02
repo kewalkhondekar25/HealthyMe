@@ -1,13 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 import { AppContext } from './Context'
 import meal1 from '../assets/meals1.jpg'
 
 const Filters = () => {
     const { sort, updateSort, searchByName, select, updateSelect } = useContext(AppContext);
-
-    const [count, setCount] = useState(0);
-
-
 
     return (
         <section className='filter-section'>
