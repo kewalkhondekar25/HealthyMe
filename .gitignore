@@ -1,4 +1,6 @@
 /node_modules
+.firebase
+.firebaserc
 # Logs
 logs
 *.log
@@ -24,4 +26,4 @@ firebase
 *.njsproj
 *.sln
 *.sw?
-.firebaserc
+firebase.json
