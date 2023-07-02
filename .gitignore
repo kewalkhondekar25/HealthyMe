@@ -1,6 +1,6 @@
 /node_modules
-.firebase
-.firebaserc
+/.firebase
+/.firebaserc
 # Logs
 logs
 *.log
