@@ -28,7 +28,7 @@ const Checkoutpage = () => {
       currency: "INR",
       //name: order.user.name,
       description: "Test Transaction",
-      image: "https://healthyme-logo.nyc3.cdn.digitaloceanspaces.com/authLogo.png",
+      image: "https://healthymes3.sgp1.cdn.digitaloceanspaces.com/authLogo.png",
       order_id: order.id,
       callback_url: "https://www.itehealthyme.in/api/paymentverification",
       prefill: {
