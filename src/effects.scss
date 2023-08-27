@@ -1058,7 +1058,7 @@ nav {
 }
 
 /*RESPONSIVENESS*/
-@media screen and (max-width:425px) {
+@media screen and (max-width:435px) {
     body {
         height: 100vh;
         width: 100%;
@@ -1067,7 +1067,7 @@ nav {
     /*NAVBAR*/
     .outer-nav {
         position: relative;
-
+        
         .badge {
             position: absolute;
             right: -150px;

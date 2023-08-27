@@ -146,7 +146,7 @@ section .t3::before{
 
 
 /*------------------------------------------------------------------RESPONSIVE*/
-@media screen and (max-width:425px) {
+@media screen and (max-width:435px) {
   body{
     /*
     background-image: url('./assets/vegan2.jpg');
@@ -162,6 +162,7 @@ section .t3::before{
     padding: 20px 20px;
   }
   nav{
+    position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-end-end-radius: 10px;

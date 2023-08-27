@@ -881,7 +881,7 @@ nav a:hover {
 }
 
 /*RESPONSIVENESS*/
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 435px) {
   body {
     height: 100vh;
     width: 100%;

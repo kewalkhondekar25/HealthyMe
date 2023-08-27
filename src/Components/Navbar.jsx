@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className={`outer-nav ${isNavbarOpen ? 'toggle-on' : 'toggle-off'}`}>
             <nav>
-                <div className='navbar'>
+                <div className='navbar container-fluid  '>
                     <div className='nav1'>
                         <ul>
                             <li><Link to='/about' onClick={closeNavbar}>

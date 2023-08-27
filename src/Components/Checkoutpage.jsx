@@ -16,8 +16,8 @@ const Checkoutpage = () => {
 
   const checkOutHandler = async (total_amount, user) => {
 
-    const { data: { key } } = await axios.get("https://www.itehealthyme.in/api/getkey")
-    const { data: { order } } = await axios.post('https://www.itehealthyme.in/api/checkout', {
+    const { data: { key } } = await axios.get("https://healthyme-payment-mrf7u.ondigitalocean.app/api/getkey")
+    const { data: { order } } = await axios.post('https://healthyme-payment-mrf7u.ondigitalocean.app/api/checkout', {
       total_amount,
       user
     })
@@ -28,9 +28,9 @@ const Checkoutpage = () => {
       currency: "INR",
       //name: order.user.name,
       description: "Test Transaction",
-      image: "https://healthymes3.sgp1.cdn.digitaloceanspaces.com/authLogo.png",
+      image: "https://healthyme-logo.blr1.cdn.digitaloceanspaces.com/authLogo.png",
       order_id: order.id,
-      callback_url: "https://www.itehealthyme.in/api/paymentverification",
+      callback_url: "https://healthyme-payment-mrf7u.ondigitalocean.app/api/paymentverification",
       prefill: {
         name: user.name,
         email: user.email,
