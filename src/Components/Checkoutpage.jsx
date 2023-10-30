@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from './Context'
 import axios from 'axios'
 import { FaCcMastercard } from 'react-icons/fa'
@@ -12,12 +12,18 @@ import {SiPaytm} from 'react-icons/si'
 
 const Checkoutpage = () => {
 
-  const { total_amount, user } = useContext(AppContext)
+  const { total_amount, user } = useContext(AppContext);
+  const [isLoaderVisible, setLoaderVisible] = useState(false);
+
+  const handleSlider = () => {
+    setLoaderVisible(!isLoaderVisible);
+    console.log(isLoaderVisible);
+  }
 
   const checkOutHandler = async (total_amount, user) => {
 
-    const { data: { key } } = await axios.get("https://healthyme-payment-mrf7u.ondigitalocean.app/api/getkey")
-    const { data: { order } } = await axios.post('https://healthyme-payment-mrf7u.ondigitalocean.app/api/checkout', {
+    const { data: { key } } = await axios.get("https://razor-pay-node-js-patch-2.vercel.app/api/getkey")
+    const { data: { order } } = await axios.post('https://razor-pay-node-js-patch-2.vercel.app/api/checkout', {
       total_amount,
       user
     })
@@ -28,9 +34,9 @@ const Checkoutpage = () => {
       currency: "INR",
       //name: order.user.name,
       description: "Test Transaction",
-      image: "https://healthyme-logo.blr1.cdn.digitaloceanspaces.com/authLogo.png",
+      image: "https://res.cloudinary.com/ddhgokvc1/image/upload/v1697583467/Portfolio/HealthyMe/mylogo2_fjqxdc.png",
       order_id: order.id,
-      callback_url: "https://healthyme-payment-mrf7u.ondigitalocean.app/api/paymentverification",
+      callback_url: "https://razor-pay-node-js-patch-2.vercel.app/api/paymentverification",
       prefill: {
         name: user.name,
         email: user.email,
@@ -49,7 +55,10 @@ const Checkoutpage = () => {
   }
   return (
     <section className='checkout-pg'>
-      <button onClick={() => checkOutHandler(total_amount, user)}>Pay Now</button>
+      <button onClick={() => {handleSlider(), checkOutHandler(total_amount, user)}}>Pay Now</button>
+      {
+        isLoaderVisible && <span className='position-absolute spinner-border text-success top-50 start-50 mt-xxl-1  ' role="status"></span>
+      }
       <table className='table table-hover caption-top'>
         <caption>Test Cards & UPI Details for Test Payment</caption>
         <thead>
